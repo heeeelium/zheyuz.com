@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiniGPT | Zheyu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg1:#f6f8ff;
+      --bg2:#e8ecff;
+      --accent:#4a4ae6;
+      --accent2:#7c6bff;
+      --muted:#6b7280;
+      --text:#0f1724;
+      --radius:18px;
+      --shadow:0 15px 45px rgba(20,30,80,0.08);
+      --maxw:850px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .panel {
+      width:90%;
+      max-width:var(--maxw);
+      background:rgba(255,255,255,0.72);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(1.15);
+      padding:2rem 2.5rem;
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    h1 {
+      margin:0 0 .4rem;
+      font-size:clamp(1.4rem,3vw,1.8rem);
+      font-weight:700;
+    }
+
+    .meta {
+      color:var(--muted);
+      font-size:.95rem;
+      margin:0 0 1.2rem;
+    }
+
+    p {
+      margin:0 0 1rem;
+      line-height:1.6;
+      color:#374151;
+    }
+
+    .section-title {
+      font-weight:700;
+      margin-top:1.5rem;
+      margin-bottom:.4rem;
+      font-size:1.05rem;
+    }
+
+    ul {
+      color:#374151;
+      line-height:1.6;
+      margin-top:.2rem;
+    }
+
+    /* Long description box */
+    .details {
+      margin-top:1rem;
+      padding:1rem 1.2rem;
+      background:rgba(255,255,255,0.85);
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:12px;
+      box-shadow:0 8px 22px rgba(16,24,40,0.05);
+    }
+
+    .buttons {
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin-top:1.5rem;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:.7rem 1.5rem;
+      border-radius:999px;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+
+    .btn.primary {
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      color:white;
+      box-shadow:0 8px 22px rgba(74,74,230,0.22);
+    }
+
+    .btn.primary:hover {
+      transform:translateY(-3px);
+      box-shadow:0 12px 30px rgba(74,74,230,0.3);
+    }
+
+    .btn.secondary {
+      background:rgba(255,255,255,0.85);
+      color:var(--accent);
+      border:1px solid rgba(74,74,230,0.2);
+      box-shadow:0 4px 12px rgba(20,30,80,0.05);
+    }
+
+    .btn.secondary:hover {
+      background:white;
+      transform:translateY(-3px);
+    }
+
+    footer {
+      margin-top:1.8rem;
+      color:var(--muted);
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    @media (max-width:600px){
+      .panel{padding:1.4rem;}
+      .buttons{flex-direction:column;align-items:center;}
+      .btn{width:100%;max-width:280px;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <main class="panel" role="main" aria-labelledby="project-title">
+    <h1 id="project-title">Project - MiniGPT</h1>
+    <p class="meta">Progressing</p>
+
+    <p>This project focuses on contructing a MiniGPT with self-written transformer blocks and MLPs to mimic human language.</p>
+
+    <h2 class="section-title">Language Used:</h2>
+    <p>C++</p>
+
+    <h2 class="section-title">Key Features</h2>
+    <ul>
+      <li>Draft version</li>
+      <li>Construction of a GPT without using libraries</li>
+      <li>Character level embeddings</li>
+    </ul>
+
+    <h2 class="section-title">Detailed Description</h2>
+    <div class="details">
+      <p>
+        This project is a practice on how to build a transformer and construct a LLM from scratch. It shares the same tensor library with the previous MLP project.
+      </p>
+      <p>
+        Character level tokens are used instead of the subword level tokens used in an actual GPT.
+      </p>
+      <p>
+        This project is a good practice of LLM coding and certainly helps with my understanding for LLM.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <a class="btn primary" href="https://github.com/heeeelium" target="_blank" rel="noopener">🔗 View Project</a>
+      <a class="btn secondary" href="../projects.html">← Back to Projects</a>
+    </div>
+
+    <footer>© <span id="year"></span> Zheyu</footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
